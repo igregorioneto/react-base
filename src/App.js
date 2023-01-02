@@ -1,24 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
-
 function App() {
+  const name = 'Teste';
+  const age = 78;
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <>
+      <header>
+        <div className="bg-green-300 mx-auto p-4">
+          <h1 className="text-center font-semibold text-xl">React Base</h1>
+        </div>
       </header>
-    </div>
+
+      <main>
+        <div className="container mx-auto p-4">
+          <p>
+            o seu nome é {name}, com {name.length} caracteres e possui {age} anos.
+          </p>
+        </div>
+      </main>
+    </>
   );
 }
 
