@@ -1,7 +1,11 @@
+import { getNewId } from "../services/idService";
+
 export default function TextInput({
   labelDescription="Descrição do label",
   inputValue="Valor padrão do input",
   onInputChange=null,
+  id="input_text",
+  autoFocus=false
 }) {
 
   function handleInputChange({currentTarget}) {
@@ -13,12 +17,13 @@ export default function TextInput({
 
   return(
     <div className="flex flex-col my-4">
-      <label className="text-sm mb-1" htmlFor="inputName">
+      <label className="text-sm mb-1" htmlFor={id}>
         {labelDescription}
       </label>
-      <input 
+      <input
+        autoFocus={autoFocus}
         type="text" 
-        id="inputName" 
+        id={id} 
         value={inputValue}
         className="border p-1"
         onChange={handleInputChange}
